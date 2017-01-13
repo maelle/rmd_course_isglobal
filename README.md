@@ -46,7 +46,9 @@ Don't hesitate to send me an email or come to my office (campus Mar, sala B) if 
 
 * RStudio RMarkdown [website](http://rmarkdown.rstudio.com/)
 
-* The link to the RStudio RMarkdown [cheatsheet in English](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) and [in Spanish](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf) I'll also have printed for you and give to you after the course
+* The link to the RStudio RMarkdown [cheatsheet in English](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) and [in Spanish](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf) I'll also have printed for you and give to you after the course.
+
+* The [`ezknitr` package](https://github.com/ropensci/ezknitr) gives you more control on where inputs and outputs of your .Rmd are (without the package, input and output are where the .Rmd is saved).
 
 * This paper ["Good enough practices for scientific computing"](https://arxiv.org/pdf/1609.00037v2.pdf) is full of useful tips and won't make you feel bad for not doing everything _perfectly_. 
 
