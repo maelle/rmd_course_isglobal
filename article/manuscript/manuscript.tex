@@ -1,0 +1,384 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Original default rstudio/pandoc latex file
+%% upated by @jhollist 09/15/2014
+%% inspired by @cboetting https://github.com/cboettig/template and
+%% @rmflight blog posts:
+%% http://rmflight.github.io/posts/2014/07/analyses_as_packages.html 
+%% http://rmflight.github.io/posts/2014/07/vignetteAnalysis.html).  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx}
+% Redefine \includegraphics so that, unless explicit options are
+% given, the image width will not exceed the width of the page.
+% Images get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\ScaleIfNeeded{%
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+{%
+ \catcode`\@=11\relax%
+ \gdef\includegraphics{\@ifnextchar[{\Oldincludegraphics}{\Oldincludegraphics[width=\ScaleIfNeeded]}}%
+}%
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={A template for writing manuscripts in Rmarkdown},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Changes borrowed from @cboettig, added by @jhollist 
+% A modified page layout 
+\textwidth 6.75in
+\oddsidemargin -0.15in
+\evensidemargin -0.15in
+\textheight 9in
+\topmargin -0.5in
+\usepackage{lineno} % add 
+  \linenumbers % turns line numbering on 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Packages and layout changes by @jhollist 09/15/2014
+\usepackage{ragged2e}
+\usepackage[font=normalsize]{caption}
+  \usepackage[doublespacing]{setspace}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+  \rfoot{\today}
+\lfoot{\thepage}
+%%Changed default abstract width and added lines
+\renewenvironment{abstract}{
+  \hfill\begin{minipage}{1\textwidth}
+  \rule{\textwidth}{1pt}\vspace{5pt}
+  \normalsize
+  \begin{justify}
+  \bfseries\abstractname\vspace{5pt}
+  \end{justify}}
+  {\par\noindent\rule{\textwidth}{1pt}\end{minipage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{A template for writing manuscripts in Rmarkdown}
+\author{
+Jeffrey W. Hollister
+Francisco Rodriguez-Sanchez
+}
+\date{}
+% Allowing for landscape pages
+\usepackage{lscape}
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
+
+% Left justification of the text: see https://www.sharelatex.com/learn/Text_alignment
+% \usepackage[document]{ragged2e} % already in the latex template
+\newcommand{\bleft}{\begin{flushleft}}
+\newcommand{\eleft}{\end{flushleft}}
+
+\begin{document}
+%%Edited by @jhollist 09/15/2014
+%%Adds title from YAML
+\begin{singlespace}
+\begin{center}
+\huge A template for writing manuscripts in Rmarkdown
+\end{center}
+%%Adds Author, correspond email asterisk, and affilnum from YAML
+\begin{center}
+\large
+Jeffrey W. Hollister \textsuperscript{1,2} 
+Francisco Rodriguez-Sanchez \textsuperscript{*} \textsuperscript{3} 
+\end{center}
+%%Adds affiliations from YAML
+\begin{justify}
+\footnotesize \emph{ 
+\\*
+\textsuperscript{1}US Environmental Protection Agency, Office of Research and Development,
+National Health and Environmental Effects Research Laboratory, Atlantic
+Ecology Division, 27 Tarzwell Drive Narragansett, RI, 02882, USA\\*
+\\*
+\textsuperscript{2}Big Name University, Department of R, City, BN, 01020, USA\\*
+\\*
+\textsuperscript{3}Estacion Biologica de Donana (EBD-CSIC), E-41092 Sevilla, Spain\\*
+}
+%%Adds corresponding author email(s) from YAML
+\newcounter{num}
+\setcounter{num}{1}
+\\[0.1cm]
+\footnotesize \emph{ 
+\ifnum\value{num}=1%
+\textsuperscript{*} corresponding author:
+\fi
+\href{mailto:f.rodriguez.sanc@gmail.com}{\nolinkurl{f.rodriguez.sanc@gmail.com}}
+\stepcounter{num}
+}
+\end{justify}
+%%Adds date from YAML
+\normalsize
+
+\end{singlespace}
+
+
+\begin{verbatim}
+Warning: package 'knitcitations' was built under R version 3.3.2
+\end{verbatim}
+
+\singlespace
+
+\vspace{2mm}
+
+\hrule
+
+Write your abstract here.
+
+\vspace{3mm}
+
+\hrule
+
+\emph{Keywords}: rmarkdown, reproducible science
+
+\doublespace
+
+\bleft
+
+\section{INTRODUCTION}\label{introduction}
+
+Write your introduction here. You can cite bibliography like this (Yan
+and Gerstein 2011, Sutherland et al. 2011), if you provide a
+\texttt{BibTeX} file with references. See
+\url{http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html}
+for more information. Or you could also use
+\href{https://cran.r-project.org/web/packages/knitcitations/index.html}{knitcitations}
+or
+\href{https://cran.r-project.org/web/packages/RefManageR/index.html}{RefManageR}
+to fetch bibliographic metadata automatically from the web. For example,
+citing a paper can be as easy as providing its DOI (Clark and Gelfand
+2006) or even just a few keywords (Ricklefs 2008). They will then
+automagically appear in the list of cited references.(Yan and Gerstein
+2011)
+
+You can even specifiy the desired output format for your bibliography by
+including a style file for a specific journal (e.g. ``ecology.csl'').
+Many different bibliography styles (CSL files) can be obtained at
+\url{http://citationstyles.org/} or
+\url{https://github.com/citation-style-language/styles}.
+
+\section{METHODS}\label{methods}
+
+\subsection{Study Area}\label{study-area}
+
+We worked in a \textbf{beautiful} place with lots of trees, like
+\emph{Quercus suber} and \emph{Laurus nobilis}.
+
+\subsection{Data collection and
+analysis}\label{data-collection-and-analysis}
+
+We applied a linear model where
+
+\[
+y_{i} = \alpha + \beta*x_{i} 
+\]
+
+We used the statistical language \texttt{R} (R Core Team 2016) for all
+our analyses. These were implemented in dynamic rmarkdown documents
+using \texttt{knitr} (Xie 2014, 2015, 2016) and \texttt{rmarkdown}
+(Allaire et al. 2016) packages. All the multilevel models were fitted
+with \texttt{lme4} (Bates et al. 2015).
+
+\section{RESULTS}\label{results}
+
+Trees in forest A grew taller than those in forest B (mean height: 25
+versus 13 m). And many more cool results that get updated dynamically.
+
+\section{DISCUSSION}\label{discussion}
+
+Discuss.
+
+\section{CONCLUSIONS}\label{conclusions}
+
+\section{ACKNOWLEDGEMENTS}\label{acknowledgements}
+
+\section{REFERENCES}\label{references}
+
+\hypertarget{refs}{}
+\hypertarget{ref-Allaireux5f2016}{}
+Allaire, J., J. Cheng, Y. Xie, J. McPherson, W. Chang, J. Allen, H.
+Wickham, A. Atkins, and R. Hyndman. 2016. Rmarkdown: Dynamic documents
+for r.
+
+\hypertarget{ref-Batesux5f2015}{}
+Bates, D., M. Mächler, B. Bolker, and S. Walker. 2015. Fitting linear
+mixed-effects models using lme4. Journal of Statistical Software
+67:1--48.
+
+\hypertarget{ref-Clarkux5f2006}{}
+Clark, J. S., and A. E. Gelfand. 2006. A future for models and data in
+environmental science. Trends in Ecology \& Evolution 21:375--380.
+
+\hypertarget{ref-Rux5fCoreux5fTeamux5f2016}{}
+R Core Team. 2016. R: A language and environment for statistical
+computing. R Foundation for Statistical Computing, Vienna, Austria.
+
+\hypertarget{ref-ricklefs2008disintegration}{}
+Ricklefs, R. 2008. Disintegration of the ecological community: American
+society of naturalists sewall wright award winner address. The American
+Naturalist 172:741--750.
+
+\hypertarget{ref-Sutherland2011}{}
+Sutherland, W. J., D. Goulson, S. G. Potts, and L. V. Dicks. 2011.
+Quantifying the impact and relevance of scientific research. PLoS ONE
+6:e27537.
+
+\hypertarget{ref-Xieux5f2014}{}
+Xie, Y. 2014. Knitr: A comprehensive tool for reproducible research in
+R. \emph{in} V. Stodden, F. Leisch, and R. D. Peng, editors.
+Implementing reproducible computational research. Chapman; Hall/CRC.
+
+\hypertarget{ref-Xieux5f2015}{}
+Xie, Y. 2015. Dynamic documents with R and knitr. 2nd editions. Chapman;
+Hall/CRC, Boca Raton, Florida.
+
+\hypertarget{ref-Xieux5f2016}{}
+Xie, Y. 2016. Knitr: A general-purpose package for dynamic report
+generation in r.
+
+\hypertarget{ref-Yan2011}{}
+Yan, K.-K., and M. Gerstein. 2011. The spread of scientific information:
+Insights from the web usage statistics in pLoS article-level metrics.
+PLoS ONE 6:e19917.
+
+\eleft
+
+\clearpage
+
+\listoftables
+
+\newpage
+
+\begin{longtable}[c]{@{}rrrrl@{}}
+\caption{A glimpse of the famous \emph{Iris} dataset.}\tabularnewline
+\toprule
+Sepal.Length & Sepal.Width & Petal.Length & Petal.Width &
+Species\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Sepal.Length & Sepal.Width & Petal.Length & Petal.Width &
+Species\tabularnewline
+\midrule
+\endhead
+5.1 & 3.5 & 1.4 & 0.2 & setosa\tabularnewline
+4.9 & 3.0 & 1.4 & 0.2 & setosa\tabularnewline
+4.7 & 3.2 & 1.3 & 0.2 & setosa\tabularnewline
+4.6 & 3.1 & 1.5 & 0.2 & setosa\tabularnewline
+5.0 & 3.6 & 1.4 & 0.2 & setosa\tabularnewline
+5.4 & 3.9 & 1.7 & 0.4 & setosa\tabularnewline
+\bottomrule
+\end{longtable}
+
+\newpage
+
+\begin{longtable}[c]{@{}lrrrrrrrrrrr@{}}
+\caption{Now a subset of mtcars dataset.}\tabularnewline
+\toprule
+& mpg & cyl & disp & hp & drat & wt & qsec & vs & am & gear &
+carb\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+& mpg & cyl & disp & hp & drat & wt & qsec & vs & am & gear &
+carb\tabularnewline
+\midrule
+\endhead
+Merc 280 & 19.2 & 6 & 167.6 & 123 & 3.92 & 3.440 & 18.30 & 1 & 0 & 4 &
+4\tabularnewline
+Merc 280C & 17.8 & 6 & 167.6 & 123 & 3.92 & 3.440 & 18.90 & 1 & 0 & 4 &
+4\tabularnewline
+Merc 450SE & 16.4 & 8 & 275.8 & 180 & 3.07 & 4.070 & 17.40 & 0 & 0 & 3 &
+3\tabularnewline
+Merc 450SL & 17.3 & 8 & 275.8 & 180 & 3.07 & 3.730 & 17.60 & 0 & 0 & 3 &
+3\tabularnewline
+Merc 450SLC & 15.2 & 8 & 275.8 & 180 & 3.07 & 3.780 & 18.00 & 0 & 0 & 3
+& 3\tabularnewline
+Cadillac Fleetwood & 10.4 & 8 & 472.0 & 205 & 2.93 & 5.250 & 17.98 & 0 &
+0 & 3 & 4\tabularnewline
+Lincoln Continental & 10.4 & 8 & 460.0 & 215 & 3.00 & 5.424 & 17.82 & 0
+& 0 & 3 & 4\tabularnewline
+\bottomrule
+\end{longtable}
+
+\clearpage
+
+\listoffigures
+
+\newpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{output/figures/Fig1-1.pdf}
+\caption{Just my first figure with a very fantastic caption.}
+\end{figure}
+
+\newpage
+
+\blandscape
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{output/figures/Fig2-1.pdf}
+\caption{Second figure in landscape format.}
+\end{figure}
+
+\elandscape
+
+\clearpage
+
+\end{document}

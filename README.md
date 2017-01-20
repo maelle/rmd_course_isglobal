@@ -23,6 +23,8 @@ You will need
 
 * the `revealjs` package (`install.packages("revealjs")`)
 
+* the `knitcitations` package (`install.packages("knitcitations")`)
+
 * the `citr` package (`install.packages("citr")`)
 
 * the `rmdTemplates` package
@@ -59,7 +61,7 @@ We are not going to write any advanced code in the chunks, and starting to learn
 
 * RMarkdown basics, we'll create a [Hello World RMarkdown](hello_world_rmd/).
 
-* Prepare a [manuscript with RMarkdown](article/). Main points: Rproj organization, template, citations.
+* Prepare a [manuscript with RMarkdown](article/).
 
 * RMarkdown slides with `reveal.js`
 
@@ -76,10 +78,13 @@ We are not going to write any advanced code in the chunks, and starting to learn
 
 * Collaboration and version control can be made easier by git and Github. You can have a look at [this tutorial](http://happygitwithr.com/) from Jenny Bryan and the chapter about git from [Hadley Wickham's R package book](http://r-pkgs.had.co.nz/git.html).
 
-* We used templates from [this package](https://github.com/Pakillo/rmdTemplates), you can check [this one](https://github.com/rstudio/rticles). Furthermore, we haven't covered this idea but one can develop a manuscript as an R package, see [this repo](https://github.com/jhollist/manuscriptPackage) and [this one](https://github.com/cboettig/template)
+* We used templates from [this package](https://github.com/Pakillo/rmdTemplates), you can check [this one](https://github.com/rstudio/rticles). Link to article about [creating a new Word template](http://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html)
+
+* Furthermore, we haven't covered this idea but one can develop a manuscript as a R package, see [this repo](https://github.com/jhollist/manuscriptPackage) and [this one](https://github.com/cboettig/template).
 
 * There is a part about RMarkdown and a ton of useful stuff in [this book](http://r4ds.had.co.nz/) from Hadley Wickham and Garrett Grolemund.
 
+* Wanna write your thesis with RMarkdown? You can! Use [`bookdown`](https://github.com/rstudio/bookdown), and look at [this repo](https://github.com/ismayc/thesisdown) with a template for a thesis. [This blog post](http://seankross.com/bookdown-start/) is also a nice introduction to `bookdown`.
 
 # Other courses at ISGlobal
 
