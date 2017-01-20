@@ -1,8 +1,8 @@
 ---
 title: "Hello World"
 author: "M. Salmon"
-date: "`r Sys.Date()`"
-output: html_document
+date: '`r Sys.Date()`'
+output: word_document
 ---
 
 ```{r setup, include=FALSE}
@@ -28,3 +28,39 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+# Section 1
+
+## Subsection 1
+
+Hey this _italic_ and this is **bold**.
+
+In our study we have `r nrow(cars)` patients.
+
+I want to make a list!
+
+* One thing
+
+* Another one
+
+```{r nice table}
+knitr::kable(summary(cars))
+```
+
+# Broom!
+
+```{r broom}
+library("broom")
+model <- lm(speed ~ dist, data = cars)
+knitr::kable(glance(model))
+```
+
+
+```{r plot large, echo=FALSE, fig.width = 15}
+plot(pressure)
+```
+
+```{r plot square, echo=FALSE, fig.width = 5, fig.height = 5}
+plot(pressure)
+```

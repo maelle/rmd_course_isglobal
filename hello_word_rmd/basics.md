@@ -6,6 +6,8 @@
 
 * Knit in a different output format.
 
+* Options, in particular echo, and options for all chunks in a set-up chunk.
+
 * Inline code. 
 
 * Text structure via headers, text style *italic* and **bold**, itemize.
@@ -14,10 +16,10 @@
 
 * Pretty tables. `kable`, and then one can explore `pander` and `stargazer`.
 
-* Figure options.
+* Regression results with `broom`.
+
+* Figure options. When changing size, it might be useful to change text size on the figure.
 
 * Caching.
 
 * End by distributing the RMarkdown cheatsheet.
-
-* Regression results with `broom`.
