@@ -70,6 +70,8 @@ We are not going to write any advanced code in the chunks, and starting to learn
 
 # Further resources
 
+* Need more motivation? See [this slides](https://github.com/Pakillo/ReproducibleScience/blob/R-AEET-Nov2016/ReproducibleScience.pdf)
+
 * RStudio RMarkdown [website](http://rmarkdown.rstudio.com/)
 
 * The link to the RStudio RMarkdown [cheatsheet in English](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) and [in Spanish](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf) I'll also have printed for you and give to you after the course.
