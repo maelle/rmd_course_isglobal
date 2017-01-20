@@ -63,6 +63,8 @@ We are not going to write any advanced code in the chunks, and starting to learn
 
 * Prepare a [manuscript with RMarkdown](article/).
 
+* Write your (PhD) thesis with RMarkdown? We'll shortly introduce the tools for doing so, and discuss pros and cons. 
+
 * RMarkdown slides with `reveal.js`
 
 
