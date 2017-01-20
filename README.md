@@ -78,6 +78,8 @@ We are not going to write any advanced code in the chunks, and starting to learn
 
 * This paper ["Good enough practices for scientific computing"](https://arxiv.org/pdf/1609.00037v2.pdf) is full of useful tips and won't make you feel bad for not doing everything _perfectly_. 
 
+* This is [another really good paper](http://www.revistaecosistemas.net/index.php/ecosistemas/article/view/1178) and it's in Spanish! _"Ciencia reproducible: qué, por qué, cómo"_
+
 * This [Coursera course](https://es.coursera.org/learn/reproducible-research) about reproducible research is great.
 
 * Collaboration and version control can be made easier by git and Github. You can have a look at [this tutorial](http://happygitwithr.com/) from Jenny Bryan and the chapter about git from [Hadley Wickham's R package book](http://r-pkgs.had.co.nz/git.html).
