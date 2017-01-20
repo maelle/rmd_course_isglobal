@@ -1,6 +1,8 @@
 Prepare a scientific manuscript
 ===============================
 
+* Real people do this, see e.g. [this repo](https://github.com/njtierney/njt_bmj_md)
+
 * Use `rmdTemplates` for getting a template.
 
 * Look at the template. Figures and tables at the end.
