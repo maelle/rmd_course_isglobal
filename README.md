@@ -37,7 +37,7 @@ library("devtools")
 install_github("Pakillo/rmdTemplates")
 ```
 
-* the `ezknitr` package (`install.packages("citr")`)
+* the `ezknitr` package (`install.packages("ezknitr")`)
 
 * A tex installation (for pdf output), see [this website](https://www.latex-project.org/get/)
 
