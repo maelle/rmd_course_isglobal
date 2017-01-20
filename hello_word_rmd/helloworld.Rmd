@@ -2,7 +2,10 @@
 title: "Hello World"
 author: "M. Salmon"
 date: '`r Sys.Date()`'
-output: pdf_document
+output: 
+  pdf_document:
+    toc: true
+    toc_depth: 2
 ---
 
 ```{r setup, include=FALSE}

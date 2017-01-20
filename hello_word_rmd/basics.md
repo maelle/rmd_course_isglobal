@@ -18,9 +18,13 @@ RMarkdown basics
 
 * Text structure via headers, text style *italic* and **bold**, itemize.
 
+* Table of contents.
+
 * Cross-references
 
 * Why to name the chunks and keep them short: navigation, debugging.
+
+* Also keep code lines short, it's good in general but even more so when you're printing code.
 
 * Pretty tables. `kable`, and then one can explore `pander` and `stargazer`.
 
