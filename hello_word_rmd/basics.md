@@ -1,3 +1,6 @@
+RMarkdown basics
+================
+
 * Let's look at the default document we get when creating a RMarkdown. YAML front matter, put today's date and your name.
 
 * Chunks vs. text.
