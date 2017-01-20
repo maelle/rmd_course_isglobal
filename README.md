@@ -3,17 +3,13 @@ RMarkdown course ISGlobal
 
 In this course (note: language to be decided based on the audience), we will learn how to use RMarkdown, a powerful reporting tool in R. Instead of copy-pasting tables, figures, number of patients into Word documents, you will be able to embed the corresponding code directly in your report.
 
+![](https://media.giphy.com/media/hjMFEOl6mDsRi/source.gif)
+
 We will prepare a scientific manuscript together, including citations. We will also discuss collaboration for manuscripts written in RMarkdown.
 
 Producing a .docx/.pdf is only one of the many things you can do with RMarkdown. Based on the RMarkdown knowledge adquired in this course, you should be able to start exploring other RMarkdown outputs. We will have a look at `reveal.js` which is a framework for producing slides. 
 
 All course material will live in this repository, and you're welcome to open issues.
-
-# How much do I need to know about R?
-
-You just need to know that R exists, how to load data into R, and for instance do a linear regression with R. Don't hesitate to contact me via maelle dot salmon at yahoo dot se if you're not too sure about whether you should come.  
-
-We are not going to write any advanced code in the chunks, and starting to learn RMarkdown could be of the first steps of your R journey.
 
 # What should I install before coming to the course?
 
@@ -29,11 +25,31 @@ You will need
 
 * the `citr` package (`install.packages("citr")`)
 
+* the `rmdTemplates` package
+
+```r
+# If you don't have devtools installed
+# first install.packages("devtools")
+install.packages("RefManageR")
+library("devtools")
+install_github("Pakillo/rmdTemplates")
+```
+
 * the `ezknitr` package (`install.packages("citr")`)
 
 * A tex installation (for pdf output), see [this website](https://www.latex-project.org/get/)
 
 Don't hesitate to send me an email or come to my office (campus Mar, sala B) if you have any installation issue.
+
+
+
+# How much do I need to know about R?
+
+![](https://media.giphy.com/media/rAm0u2k17rM3e/giphy.gif)
+
+You just need to know that R exists, how to load data into R, and for instance do a linear regression with R. Don't hesitate to contact me via maelle dot salmon at yahoo dot se if you're not too sure about whether you should come.  
+
+We are not going to write any advanced code in the chunks, and starting to learn RMarkdown could be of the first steps of your R journey.
 
 # Syllabus
 
@@ -43,7 +59,7 @@ Don't hesitate to send me an email or come to my office (campus Mar, sala B) if 
 
 * RMarkdown basics, we'll create a [Hello World RMarkdown](hello_world_rmd/).
 
-* Prepare a manuscript with RMarkdown. Main points: Rproj organization, template, citations.
+* Prepare a [manuscript with RMarkdown](article/). Main points: Rproj organization, template, citations.
 
 * RMarkdown slides with `reveal.js`
 
@@ -60,7 +76,10 @@ Don't hesitate to send me an email or come to my office (campus Mar, sala B) if 
 
 * Collaboration and version control can be made easier by git and Github. You can have a look at [this tutorial](http://happygitwithr.com/) from Jenny Bryan and the chapter about git from [Hadley Wickham's R package book](http://r-pkgs.had.co.nz/git.html).
 
+* We used templates from [this package](https://github.com/Pakillo/rmdTemplates), you can check [this one](https://github.com/rstudio/rticles). Furthermore, we haven't covered this idea but one can develop a manuscript as an R package, see [this repo](https://github.com/jhollist/manuscriptPackage) and [this one](https://github.com/cboettig/template)
+
 * There is a part about RMarkdown and a ton of useful stuff in [this book](http://r4ds.had.co.nz/) from Hadley Wickham and Garrett Grolemund.
+
 
 # Other courses at ISGlobal
 
