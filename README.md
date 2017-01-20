@@ -57,7 +57,7 @@ We are not going to write any advanced code in the chunks, and starting to learn
 
 ![](http://media4.giphy.com/media/t0TNY68t8wq2Y/giphy.gif)
 
-* Why RMarkdown?
+* [Why RMarkdown?](why_rmd.md)
 
 * RMarkdown basics, we'll create a [Hello World RMarkdown](hello_word_rmd/).
 
