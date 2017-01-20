@@ -1,3 +1,6 @@
+---
+output: word_document
+---
 RMarkdown basics
 ================
 
@@ -14,6 +17,8 @@ RMarkdown basics
 * Inline code. 
 
 * Text structure via headers, text style *italic* and **bold**, itemize.
+
+* Cross-references
 
 * Why to name the chunks and keep them short: navigation, debugging.
 
