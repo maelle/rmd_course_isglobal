@@ -29,17 +29,23 @@ You will need
 
 * the `citr` package (`install.packages("citr")`)
 
-* A tex installation (for pdf output), see https://www.latex-project.org/get/
+* the `ezknitr` package (`install.packages("citr")`)
+
+* A tex installation (for pdf output), see [this website](https://www.latex-project.org/get/)
 
 Don't hesitate to send me an email or come to my office (campus Mar, sala B) if you have any installation issue.
 
-# What is in this repository?
+# Syllabus
 
-* At some point I'll add the data/bibliography file.
+![](http://media4.giphy.com/media/t0TNY68t8wq2Y/giphy.gif)
 
-* The slides although I doubt I'll make too many slides, we'll be too busy coding for looking at slides.
+* Why RMarkdown?
 
-* The RMarkdown we'll prepare together (I'll live code).
+* RMarkdown basics, we'll create a [Hello World RMarkdown](hello_world_rmd/).
+
+* Prepare a manuscript with RMarkdown. Main points: Rproj organization, template, citations.
+
+* RMarkdown slides with `reveal.js`
 
 
 # Further resources
@@ -47,8 +53,6 @@ Don't hesitate to send me an email or come to my office (campus Mar, sala B) if 
 * RStudio RMarkdown [website](http://rmarkdown.rstudio.com/)
 
 * The link to the RStudio RMarkdown [cheatsheet in English](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) and [in Spanish](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf) I'll also have printed for you and give to you after the course.
-
-* The [`ezknitr` package](https://github.com/ropensci/ezknitr) gives you more control on where inputs and outputs of your .Rmd are (without the package, input and output are where the .Rmd is saved).
 
 * This paper ["Good enough practices for scientific computing"](https://arxiv.org/pdf/1609.00037v2.pdf) is full of useful tips and won't make you feel bad for not doing everything _perfectly_. 
 
