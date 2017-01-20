@@ -59,7 +59,7 @@ We are not going to write any advanced code in the chunks, and starting to learn
 
 * Why RMarkdown?
 
-* RMarkdown basics, we'll create a [Hello World RMarkdown](hello_world_rmd/).
+* RMarkdown basics, we'll create a [Hello World RMarkdown](hello_word_rmd/).
 
 * Prepare a [manuscript with RMarkdown](article/).
 
