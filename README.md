@@ -63,9 +63,9 @@ We are not going to write any advanced code in the chunks, and starting to learn
 
 * Prepare a [manuscript with RMarkdown](article/).
 
-* Write your (PhD) thesis with RMarkdown? We'll shortly introduce the tools for doing so, and discuss pros and cons. 
+* [Write your (PhD) thesis with RMarkdown?](thesis/) We'll shortly introduce the tools for doing so, and discuss pros and cons. 
 
-* RMarkdown slides with `reveal.js`
+* [RMarkdown slides](slides/) with `reveal.js` or `Beamer` including discussion of how to keep the corporate identity without the Power Point template.
 
 
 # Further resources
